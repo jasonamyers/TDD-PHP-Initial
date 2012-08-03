@@ -10,8 +10,6 @@ class StringCalculator {
 				$sum += $number;
 			}
 			return $sum;
-		} else if (strlen($string) == 1){
-			return $string;
 		} else {
 			return 0;	
 		}
