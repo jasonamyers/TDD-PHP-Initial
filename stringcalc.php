@@ -3,9 +3,12 @@
 
 class StringCalculator {
 	public function Add($string){
-		if (strlen($string) == 3){
+		if (strlen($string) != 0){
 			$numbers = explode(",", $string);
-			$sum =  $numbers[0] + $numbers[1];
+			$sum = 0;
+			foreach ($numbers as $number) {
+				$sum += $number;
+			}
 			return $sum;
 		} else if (strlen($string) == 1){
 			return $string;
