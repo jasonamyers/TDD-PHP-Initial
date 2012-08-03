@@ -35,5 +35,22 @@ function testAddTwoNumberString() {
 	$this->assertEquals($expected, $actual);
 }
 
+function testAddThreeNumberString() {
+	$expected = 6;
+	$actual = $this->stringcalc->Add("1,2,3");
+	$this->assertEquals($expected, $actual);
+}
+
+function testAddFourNumberString() {
+	$expected = 34;
+	$actual = $this->stringcalc->Add("10,9,8,7");
+	$this->assertEquals($expected, $actual);
+}
+
+function testAddTwoNumbersWithNewLineDelimiter() {
+	$expected = 6;
+	$actual = $this->stringcalc->Add("1\n2,3");
+	$this->assertEquals($expected, $actual);
+}
 }
 ?>
