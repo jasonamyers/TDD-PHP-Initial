@@ -47,10 +47,17 @@ function testAddFourNumberString() {
 	$this->assertEquals($expected, $actual);
 }
 
-function testAddTwoNumbersWithNewLineDelimiter() {
+function testAddThreeNumbersWithNewLineDelimiter() {
 	$expected = 6;
 	$actual = $this->stringcalc->Add("1\n2,3");
 	$this->assertEquals($expected, $actual);
 }
+
+function testAddWithBadNewLineCommaDelimitera() {
+	$expected = null;
+	$actual = $this->stringcalc->Add("1\n,");
+	$this->assertEquals($expected, $actual);
+}
+
 }
 ?>
